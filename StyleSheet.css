@@ -1,0 +1,407 @@
+:root {
+    --mainColour: #1A659E;
+    --secondaryColour: #6C91C2;
+    --titleFont: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --tertiaryColour: #a0badc;
+    --textColour: #1e1f4c;
+    --warningColour: rgb(255, 129, 129);
+}
+body {
+    margin: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--textColour);
+}
+header {
+    background-color: var(--mainColour);
+    padding: 20px;
+    color: white;
+}
+
+h1 {
+    font-family: var(--titleFont);
+    font-size: 60px;
+    margin: 0;
+}
+
+h2 {
+    font-style: italic;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 40px;
+    font-family: var(--titleFont);
+}
+
+nav {
+    background-color: var(--mainColour);
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    /* background-color: var(--mainColour); */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li a {
+    display: block;
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 25%;
+    font-size: 20px;
+    color: white;
+    list-style-type: none;
+}
+
+.activeTab {
+    background-color: white;
+    /* font-style: italic; */
+    font-weight: bold;
+    color: var(--textColour);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+li a:has(> .activeTab) {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+li a:hover {
+    background-color: var(--secondaryColour);
+}
+
+.titleBanner {
+    width: 100%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-family: var(--titleFont);
+    text-transform:uppercase;
+}
+
+.underline {
+    padding: 1px;
+    width: 100%;
+    
+    background-color: var(--textColour);
+    margin: 20px 0 20px 0
+}
+
+.verticalLine {
+    padding: 1px;
+    height: 90%;
+    background-color: black;
+    margin: auto 5px auto 5px;
+}
+
+.infoBlock {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+.projectsContainer .underline {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.project {
+    transition: 0.5s;
+    z-index: 10;
+    padding: 10px;
+    position: relative;
+}
+
+.projectBackground {
+    z-index: 0;
+    /* width: 0;
+    height: 0; */
+    width: 50%;
+    height: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--secondaryColour);
+    border-radius: 20px;
+    margin: -20px;
+}
+
+.programmingLanguage {
+    position: absolute;
+    top: 0px;
+    right: 2%;
+    text-align: end;
+    color: var(--tertiaryColour);
+    font-size: 25px;
+    font-style: italic;
+    z-index: -20;
+}
+
+.project:hover {
+    background-color: var(--secondaryColour);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.project h3 {
+    text-align: center;
+    font-family: var(--titleFont);
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.project img {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.projectDetails {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: auto;
+    
+}
+
+.projectDetails h4 {
+    text-align: center;
+    margin-bottom: 4px;
+    margin-top: 10px;
+}
+
+.projectDetails p {
+    margin: auto;
+    line-height: 20px;
+}
+
+h4 {
+    font-size: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-family: var(--titleFont);
+}
+
+.subHeader {
+    font-size: 18px;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    /* font-weight: lighter; */
+}
+
+.infoBlock ul {
+    margin-top: 3px;
+}
+
+.infoItem {
+    margin-top: 30px;
+}
+
+.endItem {
+    margin-top: 30px;
+    text-align: end;
+}
+
+.gameWidget {
+    margin: auto;
+    width: 33%;
+    border-color: rgb(150, 150, 150);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    /* background-color: black; */
+    padding: 10px;
+}
+
+.unavailableButton {
+    width: 25%;
+    margin: 10px auto 10px auto;
+    background-color: var(--warningColour);
+    color: white;
+    border-color: red;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 6px;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:
+    -0.5px -0.5px 0 black,  
+    0.5px -0.5px 0 black,
+    -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
+}
+
+.playButton {
+    width: 25%;
+    margin: 10px auto 10px auto;
+    background-color: var(--secondaryColour);
+    color: white;
+    border-color: var(--mainColour);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 6px;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-shadow:
+    -0.5px -0.5px 0 black,  
+    0.5px -0.5px 0 black,
+    -0.5px 0.5px 0 black,
+    0.5px 0.5px 0 black;
+}
+
+.playButton:hover {
+    background-color: var(--mainColour);
+    border-color: var(--secondaryColour);
+}
+
+figure {
+    transition: 0.5s;
+    width: 450px;
+    padding: 20px;
+    margin: auto;
+}
+
+.grid :nth-child(odd) > figcaption {
+    text-align: right;
+}
+
+.grid :nth-child(odd) > p {
+    text-align: right;
+}
+
+figure:hover {
+    background-color: var(--tertiaryColour);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+figure img {
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+}
+
+figcaption {
+    width: 100%;
+    /* text-align: center; */
+    font-style: italic;
+}
+
+.videoContainer {
+    width: 450px;
+    padding: 20px;
+}
+
+.videoCaption {
+    width: 100%;
+    font-style: italic;
+}
+
+#expandedImageBackground {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1px;
+    top: 0;
+    left: 0;
+
+}
+
+.closeImageButton {
+    margin-top: 2%;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.closeImageButton:hover {
+    cursor: pointer;
+}
+
+.expandedImageContainer {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    margin-top: 2%;
+}
+
+iframe.expandedImage {
+    height: 650px;
+}
+
+.expandedImage {
+    width: 1000px;
+    max-height: 600px;
+    height: auto;
+    margin: auto;
+}
+
+.expandedImageCaption {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.gameInfoText {
+    text-align: justify;
+    width: 75%;
+    margin: auto;
+}
+
+.gameInfoBlock {
+    width: 75%; 
+    margin: auto;
+}
+
+h5 {
+    font-style: italic;
+    color: var(--mainColour);
+    margin: 20px 0 0 0;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.container{
+	margin: auto;
+	width: 1000px;
+}
+
+footer {
+    height: 300px;
+}

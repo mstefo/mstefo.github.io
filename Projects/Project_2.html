@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Pokémon Project | M Stefo</title>
+		<link href="../StyleSheet.css" rel="stylesheet"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+        <script src="../script.js"></script>
+	</head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Michal Stefanowski</h1>
+                <h2>Passionate - Creative - Dedicated</h2>
+            </div>
+        </header>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="../GamesPortfolio.html">Games Projects</a></li>
+                    <li><a href="../WebMobilePortfolio.html">Web & Mobile Projects</a></li>
+                    <li><a href="../Resume.html">Resume</a></li>
+                    <li><a href="../About.html">About Me</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div class="container">
+                <h3 class="center" style="margin-top: 80px;">Untitled Pokémon Project</h3>
+                <div class="underline"></div>
+                <h4 class="center">What Is Untitled Pokémon Project?</h4>
+                <p class="gameInfoText">
+                    This project is an experiment to expand on my knowledge of the Unity engine. It is only made with the intention
+                    of testing the limits of what I can achieve and is <b>not intended for any redistribution</b>. This game is a 3D turn based
+                    battle game where teams of up to 6 Pokémon compete to complete specific objectives. The battle system takes strong
+                    inspiration from <em>Pokémon Conquest</em> (2012) and incorporates elements from <em>Pokémon Masters EX</em> (2019).
+                </p>
+                <div class="videoContainer" style="margin: auto; width: 800px;">
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/OjwRrr_bdQc?si=RD7pEcTyvKqAZasr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <p class="videoCaption" style="text-align: center;">Gameplay Demo of Banners Ruleset</p>
+                </div>
+                <div class="underline"></div>
+                <h4 class="center">Key Contributions</h4>
+                <p class="gameInfoText">
+                    As the sole contributor to this project, most features were developed by me. This includes the implementation of
+                    a complex turn based battle system, an "Event Queue" system, unique levels, fully functioning AI and all UI elements.
+                    Models, animations, sprites, icons and all audio were not created by me but imported through external tools
+                    such as Blender. Additionally, the model outline effect is done by Chris Nolet's Quick Outline package.
+                </p>
+                <div class="gameInfoBlock">
+                    <h5>Battle System</h5>
+                    <ul>
+                        <li>Implemented most battle logic found in <em>Pokémon Conquest</em></li>
+                        <li>Ideated and added new features (e.g. weather, Sync Moves etc.) to the existing formula</li>
+                        <li>Implemented an "Event Queue", which allows stat changes or modifications to apply sequentially</li>
+                        <li>Multiple gamemode rulesets such as claiming all objectives, defeating the most AI controlled enemies etc.</li>
+                        <li>Created and designed unique battlefields as well as rebuilt some from <em>Pokémon Conquest</em></li>
+                        <li>Incorporated fully functioning AI which properly weighs whether to priotise objectives or defeating opponents</li>
+                    </ul>
+                </div>
+                <div class="grid">
+                    <div class="videoContainer">
+                        <iframe width="450" height="253" src="https://www.youtube.com/embed/33dvvYgjw3o?si=kE35lCOEiRfjiFz6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p class="videoCaption">AI Defeats Player In 3 Turns</p>
+                    </div>
+                    <div class="videoContainer">
+                        <iframe width="450" height="253" src="https://www.youtube.com/embed/ekVpt0kC7ac?si=hx2639Zl2BELlBGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <p class="videoCaption">Gameplay Demo of Hunt Ruleset</p>
+                    </div>
+                </div>
+                <div class="gameInfoBlock">
+                    <h5>User Interface</h5>
+                    <ul>
+                        <li>Created multiple mockups of UI elements</li>
+                        <li>Implemented finalised UI designs</li>
+                    </ul>
+                    <p><em>Note: most sprites or icons were imported and not made by me</em></p>
+                </div>
+                <div class="grid">
+                    <figure onclick="expandImage('Pokemon Unity/Pokemon Selected.png', 'Pokémon Selected Screen')">
+                        <img src="../Images/Pokemon Unity/Pokemon Selected.png" alt="Pokémon Selected Screen">
+                        <figcaption>Pokémon Selected Screen</figcaption>
+                    </figure>
+                    <figure onclick="expandImage('Pokemon Unity/Move Select.png', 'Move Select Screen')">
+                        <img src="../Images/Pokemon Unity/Move Select.png" alt="Move Select Screen">
+                        <figcaption>Move Select Screen</figcaption>
+                    </figure>
+                </div>
+                <div class="gameInfoBlock">
+                    <h5>Development Tools</h5>
+                    <ul>
+                        <li>Created in-engine tools to assist with game design to rapidly develop Pokémon abilities or map effects</li>
+                        <li>Use of external tools such as Blender to properly package some model assets (e.g. Trainer characters)</li>
+                        <li>Use of built in Unity tools to correctly set up imported assets</li>
+                    </ul>
+                </div>
+                <div class="underline"></div>
+                <h4 class="center">Additional Media</h4>
+                <div class="grid">
+                    <figure onclick="expandImage('Pokemon Unity/Eterna Forest.png', 'Eterna Forest Greybox')">
+                        <img src="../Images/Pokemon Unity/Eterna Forest.png" alt="Eterna Forest Greybox">
+                        <figcaption>Eterna Forest Greybox, Map Designed By Me</figcaption>
+                    </figure>
+                    <figure onclick="expandImage('Pokemon Unity/Bell Tower.png', 'Bell Tower Greybox')">
+                        <img src="../Images/Pokemon Unity/Bell Tower.png" alt="Bell Tower Greybox">
+                        <figcaption>Bell Tower Greybox, Map Designed By Me</figcaption>
+                    </figure>
+                    <figure onclick="expandImage('Pokemon Unity/Eterna Forest Diagram.png', 'Eterna Forest Layout Diagram')">
+                        <img src="../Images/Pokemon Unity/Eterna Forest Diagram.png" alt="Eterna Forest Layout Diagram">
+                        <figcaption>Eterna Forest Layout Diagram</figcaption>
+                    </figure>
+                    <figure onclick="expandImage('Pokemon Unity/Bell Tower Diagram.png', 'Bell Tower Layout Diagram')">
+                        <img src="../Images/Pokemon Unity/Bell Tower Diagram.png" alt="Bell Tower Layout Diagram">
+                        <figcaption>Bell Tower Layout Diagram</figcaption>
+                    </figure>
+                    
+                </div>
+
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </body>
+</html>
