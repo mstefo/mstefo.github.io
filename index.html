@@ -20,11 +20,10 @@
         <nav>
             <div class="container">
                 <ul>
-                    <li><a onclick="LoadPage('GamesPortfolio')"><div class="activeTab">Games Projects</div></a></li>
-                    <li><a onclick="LoadPage('WebMobilePortfolio')">Web & Mobile Projects</a></li>
-                    <li><a onclick="LoadPage('Resume')">Resume</a></li>
-                    <li><a onclick="LoadPage('About')">About Me</a></li>
-                    
+                    <li><a id="GamesProjectsTab" onclick="LoadPage('GamesPortfolio', this)">Games Projects</a></li>
+                    <li><a id="WebPortfolioTab" onclick="LoadPage('WebMobilePortfolio', this)">Web & Mobile Projects</a></li>
+                    <li><a id="ResumeTab" onclick="LoadPage('Resume', this)">Resume</a></li>
+                    <li><a id="AboutTab" onclick="LoadPage('About', this)">About Me</a></li>
                 </ul>
             </div>
         </nav>
