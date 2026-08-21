@@ -53,12 +53,45 @@ const expandImage = (imageUrl, caption) => {
                 closeExpansion()
             }
         } 
-
     }
-    
     
 }
 
 const closeExpansion = () => {
     imageBackground.remove()
+}
+
+$(function() {
+    let url = window.location.search;
+    if(url.includes("?")) {
+        url = url.replace("?", "");
+        let parameterArray = url.split("&");
+        parameterArray.forEach(parameter => {
+            let argument = parameter.split("=");
+            if(argument[0] === 'target') {
+                LoadPage(argument[1]);
+            }
+        });
+    }
+});
+
+function LoadPage(target) {
+    let container = $(".container");
+    container.html(`<p>Loading page...</p>`);
+    let targetURL = "";
+    if(target.includes("project")) {
+        targetURL = `/projects/${target}.html`;
+    } else {
+        targetURL = `/${target}.html`;
+    }
+    $.ajax({
+        method: "GET",
+        url: `/${target}.html`,
+        success: function(result) {
+            container.html(result);
+        },
+        error: function(result) {
+            alert("The targetted page could not be loaded");
+        }
+    })
 }
