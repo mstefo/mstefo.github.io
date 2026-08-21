@@ -76,7 +76,7 @@ function LoadPage(target, tab) {
     }
     $.ajax({
         method: "GET",
-        url: `/${target}.html`,
+        url: targetURL,
         success: function(result) {
             container.html(result);
         },
