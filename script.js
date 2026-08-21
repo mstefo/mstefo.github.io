@@ -1,6 +1,6 @@
-const OpenProject = (id) => {
-    window.location = "Projects/Project_"+id+".html";
-}
+// const OpenProject = (id) => {
+//     window.location = "Projects/Project_"+id+".html";
+// }
 
 var imageBackground
 
@@ -76,7 +76,7 @@ $(function() {
 });
 
 function LoadPage(target) {
-    let container = $(".container");
+    let container = $("#mainContent");
     container.html(`<p>Loading page...</p>`);
     let targetURL = "";
     if(target.includes("project")) {
