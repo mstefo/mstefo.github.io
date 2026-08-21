@@ -77,6 +77,8 @@ $(function() {
 
 function LoadPage(target) {
     let container = $("#mainContent");
+    console.log(container);
+    
     container.html(`<p>Loading page...</p>`);
     let targetURL = "";
     if(target.includes("project")) {
@@ -84,10 +86,14 @@ function LoadPage(target) {
     } else {
         targetURL = `/${target}.html`;
     }
+    console.log("Acquiring "+targetURL);
+    
     $.ajax({
         method: "GET",
         url: `/${target}.html`,
         success: function(result) {
+            console.log(result);
+            
             container.html(result);
         },
         error: function(result) {
