@@ -57,10 +57,19 @@ const closeExpansion = () => {
 }
 
 function LoadPage(target, tab) {
+    let currentlyActiveTab = $(".activeTab");
+    if(currentlyActiveTab.length > 0) {
+        let activeTabText = currentlyActiveTab.html();
+        currentlyActiveTab.parent().html(activeTabText);
+    }
+    if(tab !== undefined) {
+        let tabText = tab.innerHTML;
+        tab.innerHTML = `<div class="activeTab">${tabText}</div>`;
+    }
     let container = $("#mainContent");
     container.html(`<p>Loading page...</p>`);
     let targetURL = "";
-    if(target.includes("project")) {
+    if(target.includes("Project")) {
         targetURL = `/projects/${target}.html`;
     } else {
         targetURL = `/${target}.html`;
@@ -70,15 +79,6 @@ function LoadPage(target, tab) {
         url: `/${target}.html`,
         success: function(result) {
             container.html(result);
-            let currentlyActiveTab = $(".activeTab");
-            if(currentlyActiveTab.length > 0) {
-                let activeTabText = currentlyActiveTab.html();
-                currentlyActiveTab.parent().html(activeTabText);
-            }
-            if(tab !== undefined) {
-                let tabText = tab.innerHTML;
-                tab.innerHTML = `<div class="activeTab">${tabText}</div>`;
-            }
         },
         error: function(result) {
             alert("Sorry! The page you are looking for is unavailable.");
