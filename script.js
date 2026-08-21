@@ -1,7 +1,3 @@
-// const OpenProject = (id) => {
-//     window.location = "Projects/Project_"+id+".html";
-// }
-
 var imageBackground
 
 const expandImage = (imageUrl, caption) => {
@@ -54,31 +50,14 @@ const expandImage = (imageUrl, caption) => {
             }
         } 
     }
-    
 }
 
 const closeExpansion = () => {
     imageBackground.remove()
 }
 
-$(function() {
-    let url = window.location.search;
-    if(url.includes("?")) {
-        url = url.replace("?", "");
-        let parameterArray = url.split("&");
-        parameterArray.forEach(parameter => {
-            let argument = parameter.split("=");
-            if(argument[0] === 'target') {
-                LoadPage(argument[1]);
-            }
-        });
-    }
-});
-
 function LoadPage(target) {
     let container = $("#mainContent");
-    console.log(container);
-    
     container.html(`<p>Loading page...</p>`);
     let targetURL = "";
     if(target.includes("project")) {
@@ -86,18 +65,15 @@ function LoadPage(target) {
     } else {
         targetURL = `/${target}.html`;
     }
-    console.log("Acquiring "+targetURL);
-    
     $.ajax({
         method: "GET",
         url: `/${target}.html`,
         success: function(result) {
-            console.log(result);
-            
             container.html(result);
         },
         error: function(result) {
-            alert("The targetted page could not be loaded");
+            alert("Sorry! The page you are looking for is unavailable.");
+            window.location.reload();
         }
     })
 }
