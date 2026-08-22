@@ -93,7 +93,7 @@ function LoadPage(target, tab) {
         url: targetURL,
         success: function(result) {
             container.html(result);
-            window.history.pushState(`mstefo portfolio: ${target}`, `https://mstefo.github.io/index?target=${target}`);
+            window.history.pushState(`mstefo portfolio: ${target}`, '', `https://mstefo.github.io/index?target=${target}`);
         },
         error: function(result) {
             alert("Sorry! The page you are looking for is unavailable.");
