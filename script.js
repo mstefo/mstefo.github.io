@@ -94,6 +94,7 @@ function LoadPage(target, tab) {
         success: function(result) {
             container.html(result);
             window.history.pushState(`mstefo portfolio: ${target}`, '', `https://mstefo.github.io/index?target=${target}`);
+            document.title = `${target} | M Stefo`;
         },
         error: function(result) {
             alert("Sorry! The page you are looking for is unavailable.");
