@@ -1,6 +1,10 @@
 <h3 class="center" style="margin-top: 80px;">Vivid Management System (V3)</h3>
 <div class="underline"></div>
 <h4 class="center">What Is Vivid Management System (V3)?</h4>
+<p style="background-color: rgb(255, 222, 121); border-radius: 5px; margin: 5px;">
+    Note: All images are either recreations of the system through mockups 
+    OR any business information has been removed.
+</p>
 <p class="gameInfoText">
     The Vivid Management System (VMS) is a proprietary application for Vivid Property Services (Vivid). 
     It is designed to assist Vivid employees with their administrative tasks on all levels, whether 
@@ -21,5 +25,4 @@
     <li>Implemented real-time AutoSaving for user audits on the field with jQuery, ColdFusion and JavaScript</li>
     <li>Incorporated multiple RESTful APIs for supply chain ordering of consumable items (e.g. soap, tissues etc.)</li>
     <li>Designed and maintained a Microsoft SQL database for storing of all business data</li>
-    <li></li>
 </ul>
