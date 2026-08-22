@@ -70,7 +70,7 @@ function LoadPage(target, tab) {
     container.html(`<p>Loading page...</p>`);
     let targetURL = "";
     if(target.includes("Project")) {
-        targetURL = `/projects/${target}.html`;
+        targetURL = `/Projects/${target}.html`;
     } else {
         targetURL = `/${target}.html`;
     }
