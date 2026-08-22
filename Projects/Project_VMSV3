@@ -1,0 +1,25 @@
+<h3 class="center" style="margin-top: 80px;">Vivid Management System (V3)</h3>
+<div class="underline"></div>
+<h4 class="center">What Is Vivid Management System (V3)?</h4>
+<p class="gameInfoText">
+    The Vivid Management System (VMS) is a proprietary application for Vivid Property Services (Vivid). 
+    It is designed to assist Vivid employees with their administrative tasks on all levels, whether 
+    they track their KPIs and metrics on the operation level or carry out customer support by organising
+    Work Orders.
+</p>
+<div class="underline"></div>
+<h4 class="center">Key Contributions</h4>
+<p class="gameInfoText">
+    The system is being rebuilt from the ground up due to the impossibility of maintaining the old version.
+    This new version, dubbed Version 3 (V3), was designed with an MVC pattern as a Content Management System (CMS).
+    My role at Vivid is to help transfer the old modules of VMS into V3.
+</p>
+<div class="gameInfoBlock">
+<ul>
+    <li>Redesigned and created a user-friendly Form Builder to allow Vivid Employees to create dynamic Audit forms to assess our cleaning duties</li>
+    <li>Integrated the FusionCharts JavaScript library to create powerful business intelligence charts & created a dynamic GUI to easily create advanced charts using this framework</li>
+    <li>Implemented real-time AutoSaving for user audits on the field with jQuery, ColdFusion and JavaScript</li>
+    <li>Incorporated multiple RESTful APIs for supply chain ordering of consumable items (e.g. soap, tissues etc.)</li>
+    <li>Designed and maintained a Microsoft SQL database for storing of all business data</li>
+    <li></li>
+</ul>
