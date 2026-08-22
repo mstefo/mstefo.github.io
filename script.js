@@ -56,6 +56,20 @@ const closeExpansion = () => {
     imageBackground.remove()
 }
 
+$(function() {
+    let url = window.location.search;
+    if(url.includes("?")) {
+        url = url.replace("?", "");
+        let parameterArray = url.split("&");
+        parameterArray.forEach(parameter => {
+            let argument = parameter.split("=");
+            if(argument[0] === 'target') {
+                LoadPage(argument[1]);
+            }
+        });
+    }
+});
+
 function LoadPage(target, tab) {
     let currentlyActiveTab = $(".activeTab");
     if(currentlyActiveTab.length > 0) {
@@ -67,7 +81,7 @@ function LoadPage(target, tab) {
         tab.innerHTML = `<div class="activeTab">${tabText}</div>`;
     }
     let container = $("#mainContent");
-    container.html(`<p>Loading page...</p>`);
+    container.html(`<p class="center">Loading page...</p>`);
     let targetURL = "";
     if(target.includes("Project")) {
         targetURL = `/Projects/${target}.html`;
@@ -79,10 +93,11 @@ function LoadPage(target, tab) {
         url: targetURL,
         success: function(result) {
             container.html(result);
+            window.history.pushState(`mstefo portfolio: ${target}`, `https://mstefo.github.io/index?target=${target}`);
         },
         error: function(result) {
             alert("Sorry! The page you are looking for is unavailable.");
-            window.location.reload();
+            window.location.href = "https://mstefo.github.io/index";
         }
-    })
+    });
 }
